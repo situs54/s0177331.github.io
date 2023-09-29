@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Пример формы HTML</h1>
+
+    <div class="forma">
+    <form action="/"
+      method="POST">
+
+      <label>
+        Однострочное текстовое поле:<br />
+        <input name="field-name-1" placeholder="ФИО" required />
+      </label><br />
+
+      <label>
+        Номер телефона:<br />
+        <input type="tel" name="field-name-1" placeholder="Номер телефона" required/>
+      </label><br />
+
+      <label>
+        Текстовое поле email:<br />
+        <input name="field-email"
+          type="email"
+          placeholder="Введите вашу почту" required />
+      </label><br />
+
+      <label>
+        Текстовое поле даты:<br />
+        <input name="field-date"
+          value="2019-08-13"
+          type="date" required />
+      </label><br />
+
+    
+       
+        
+           Ваш пол:<br />
+      <label><input type="radio" 
+        name="radio-group-1" value="Значение1" required/>
+        Мужской</label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        Женский</label>
+        <br />
+        
+
+      
+  <input required type="checkbox" id="java" name="language" value="java">
+  <label for="java">Java</label><br>
+  <input type="checkbox" id="python" name="language" value="python">
+  <label for="python">Python</label><br>
+  <input type="checkbox" id="javascript" name="language" value="javascript">
+  <label for="javascript">JavaScript</label><br>
+  <input type="checkbox" id="csharp" name="language" value="csharp">
+  <label for="csharp">C#</label><br>
+ 
+      <label>
+        Многострочное текстовое поле:<br />
+        <textarea  name="field-name-2">начальное значение</textarea>
+      </label><br />
+
+
+
+
+      Чекбокс:<br />
+      <label><input required type="checkbox" 
+        name="check-1" />
+        С контрактом ознакомлен</label><br />
+
+      Кнопка отправки формы,
+      при нажатии заполненные в форму данные
+      отправятся в формате urlencoded методом
+      POST или GET по адресу URL_отправки_данных:
+      <input type="submit" value="Отправить" />
+    </form>
+
+    <h1><a href="index.html">Назад</a></h1>
+    
+</body>
+</html>
