@@ -1,10 +1,22 @@
-body {
+/* body {
     background-image: url('bleach.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
     
+  } */
+img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+  body{
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); 
+    padding: 0;
+    margin: 0;
+    
   }
+
 html{
   scroll-behavior: smooth;
 }
@@ -14,11 +26,27 @@ max-width: 300px;
 border: solid;
 padding: 5px;
 background-color: rgb(232, 226, 226);
+margin-bottom: 10px;
 }
 
 header {
     background-color: #ebebeb57;
     padding: 10px;
+}
+
+.megaref{
+  display: flex;
+}
+.ref li{
+  list-style-type: none;
+
+}
+.ref a{
+  text-decoration: none;
+color: #ffffffb8;
+}
+.ref a:hover{
+  background-color: #00000043;
 }
 
 .logo{
@@ -56,10 +84,11 @@ nav a {
     display: block;
     padding: 10px;
     text-decoration: none;
+    color: #f9f5f5;
 }
 
 nav a:hover {
-    background-color: #ddd;
+    background-color: #17141433;
 }
 
 
@@ -144,4 +173,24 @@ table {
   
   tr:nth-child(odd) {
     background-color: #ddd;
+  }
+  /* ////////////////////////////// */
+  .abc {
+    display: flex;
+    flex-direction: column;
+}
+  @media (min-device-width: 0px) and (max-device-width: 700px) {
+.nav{
+  display: block;
+}
+.nav li{
+  float: none;
+}
+.navi{
+ display: none;
+}
+.tablica{
+  order: -1;
+}
+
   }
