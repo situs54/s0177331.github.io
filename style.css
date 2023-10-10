@@ -5,6 +5,7 @@
     background-position: top;
     
   } */
+  
 img{
   border-radius: 50%;
   width: 150px;
@@ -20,13 +21,17 @@ img{
 html{
   scroll-behavior: smooth;
 }
+a{
+  text-decoration: none !important;
+  color: #ffffffb8 !important;
+}
 
 .forma{
 max-width: 300px;
 border: solid;
 padding: 5px;
 background-color: rgb(232, 226, 226);
-margin-bottom: 10px;
+margin-bottom: 25px;
 }
 
 header {
@@ -36,6 +41,10 @@ header {
 
 .megaref{
   display: flex;
+  margin-bottom: 25px;
+}
+.tablica{
+  margin-bottom: 25px;
 }
 .ref li{
   list-style-type: none;
