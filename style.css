@@ -1,3 +1,16 @@
+    #calculator {
+      background-color: #555; /* Цвет фона для дива с калькулятором */
+      padding: 20px;
+      border-radius: 10px;
+      margin: auto;
+      max-width: 400px;
+    }
+    select, input, button {
+      margin: 5px;
+      padding: 5px;
+    }
+
+
 /* body {
     background-image: url('bleach.jpg');
     background-repeat: no-repeat;
