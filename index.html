@@ -36,7 +36,61 @@
     </header>
         
     <br>
-    
+      <div id="calculator">
+
+    <h2>Калькулятор стоимости заказа</h2>
+
+    <label for="product">Выберите товар:</label>
+    <select id="product">
+      <option value="item1">Товар 1 - $10</option>
+      <option value="item2">Товар 2 - $20</option>
+      <option value="item3">Товар 3 - $30</option>
+    </select>
+
+    <br><br>
+
+    <label for="quantity">Введите количество:</label>
+    <input type="text" id="quantity" placeholder="Количество">
+
+    <br><br>
+
+    <button onclick="calculateTotal()">Рассчитать стоимость</button>
+
+    <br><br>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script>
+    function calculateTotal() {
+      var selectedProduct = document.getElementById("product").value;
+      var quantity = document.getElementById("quantity").value;
+      
+      // Присваиваем цену товара в зависимости от выбора
+      var price;
+      switch (selectedProduct) {
+        case "item1":
+          price = 10;
+          break;
+        case "item2":
+          price = 20;
+          break;
+        case "item3":
+          price = 30;
+          break;
+        default:
+          price = 0;
+      }
+      
+      // Рассчитываем стоимость заказа
+      var total = price * quantity;
+      
+      // Выводим результат на страницу
+      document.getElementById("result").innerHTML = "Стоимость заказа: $" + total;
+    }
+  </script>
+
 <div class="container abc">
 
 <div class="megaref">
