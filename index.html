@@ -37,110 +37,110 @@
         
     <br>
     <div class="calc">
-         <h1 style="color:white">Калькулятор стоимости услуги</h1>
-    <form>
-        <label for="quantity" style="color:white">Количество:</label>
-        <input type="number" id="quantity" min="1" value="1">
-        <br>
+        <h1 style="color:white">Калькулятор стоимости услуги</h1>
+        <form>
+            <label for="quantity" style="color:white">Количество:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <br>
 
-        <label style="color:white">Тип услуги:</label>
-        <br>
-        <input type="radio" id="type1" name="type" value="1" checked>
-        <label style="color:white" for="type1">Тип 1</label>
-        <br>
-        <input type="radio" id="type2" name="type" value="2">
-        <label style="color:white" for="type2">Тип 2</label>
-        <br>
-        <input type="radio" id="type3" name="type" value="3">
-        <label style="color:white" for="type3">Тип 3</label>
-        <br>
+            <label style="color:white">Тип услуги:</label>
+            <br>
+            <input type="radio" id="type1" name="type" value="1" checked>
+            <label style="color:white" for="type1">Тип 1</label>
+            <br>
+            <input type="radio" id="type2" name="type" value="2">
+            <label style="color:white" for="type2">Тип 2</label>
+            <br>
+            <input type="radio" id="type3" name="type" value="3">
+            <label style="color:white" for="type3">Тип 3</label>
+            <br>
 
-        <div id="optionsDiv">
-            <label style="color:white" for="option">Опция:</label>
-            <select id="option">
-                <option style="color:white" value="option1">Опция 1</option>
-                <option style="color:white"value="option2">Опция 2</option>
-            </select>
-        </div>
+            <div id="optionsDiv">
+                <label style="color:white" for="option">Опция:</label>
+                <select id="option">
+                    <option style="color:white" value="option1">Опция 1</option>
+                    <option style="color:white" value="option2">Опция 2</option>
+                </select>
+            </div>
 
-        <div id="propertyDiv">
-            <input type="checkbox" id="property">
-            <label for="property">Свойство</label>
-        </div>
+            <div id="propertyDiv">
+                <input type="checkbox" id="property">
+                <label style="color:white" for="property">Свойство</label>
+            </div>
 
-        <br>
-        <label for="price">Цена:</label>
-        <span id="price">0</span> руб.
-    </form>
+            <br>
+            <label style="color:white" for="price">Цена:</label>
+            <span style="color:white" id="price">0</span> руб.
+        </form>
 
-    <script>
+        <script>
 
-        $(document).ready(function () {
-            $("#quantity, input[name='type'], #option, #property").on("change", function () {
-                recalculatePrice();
+            $(document).ready(function () {
+                $("#quantity, input[name='type'], #option, #property").on("change", function () {
+                    recalculatePrice();
+                });
+
+                $("#quantity").on("input", function () {
+                    var quantity = $(this).val();
+                    if (quantity < 0 || isNaN(quantity)) {
+                        $(this).val(1);
+                    }
+                });
             });
 
-            $("#quantity").on("input", function () {
-                var quantity = $(this).val();
-                if (quantity < 0 || isNaN(quantity)) {
-                    $(this).val(1);
-                }
-            });
-        });
+            function recalculatePrice() {
+                var quantity = $("#quantity").val();
+                var type = $("input[name='type']:checked").val();
+                var option = $("#option").val();
+                var property = $("#property").is(":checked");
 
-        function recalculatePrice() {
-            var quantity = $("#quantity").val();
-            var type = $("input[name='type']:checked").val();
-            var option = $("#option").val();
-            var property = $("#property").is(":checked");
+                var price = 0;
 
-            var price = 0;
+                // Расчет стоимости в зависимости от типа услуги, опции и свойства товара
 
-            // Расчет стоимости в зависимости от типа услуги, опции и свойства товара
-
-            // Остальной код не изменился
-        }
-
-        $(document).ready(function() {
-            $("#quantity, input[name='type'], #option, #property").on("change", function() {
-                recalculatePrice();
-            });
-        });
-
-        function recalculatePrice() {
-            var quantity = $("#quantity").val();
-            var type = $("input[name='type']:checked").val();
-            var option = $("#option").val();
-            var property = $("#property").is(":checked");
-
-            var price = 0;
-
-            // Расчет стоимости в зависимости от типа услуги, опции и свойства товара
-            if (type == 1) {
-              // Расчет для первого типа товара
-              price = 10;
-            } else if (type == 2) {
-              // Расчет для второго типа товара
-              if (option == "option1") {
-                  price = 20;
-              } else if (option == "option2") {
-                  price = 30;
-              }
-            } else if (type == 3) {
-              // Расчет для третьего типа товара
-              if (property) {
-                  price = 15;
-              } else {
-                  price = 5;
-              }
+                // Остальной код не изменился
             }
 
-            var totalPrice = price * quantity;
+            $(document).ready(function () {
+                $("#quantity, input[name='type'], #option, #property").on("change", function () {
+                    recalculatePrice();
+                });
+            });
 
-            $("#price").text(totalPrice);
-        }
-    </script>
-</div>
+            function recalculatePrice() {
+                var quantity = $("#quantity").val();
+                var type = $("input[name='type']:checked").val();
+                var option = $("#option").val();
+                var property = $("#property").is(":checked");
+
+                var price = 0;
+
+                // Расчет стоимости в зависимости от типа услуги, опции и свойства товара
+                if (type == 1) {
+                    // Расчет для первого типа товара
+                    price = 10;
+                } else if (type == 2) {
+                    // Расчет для второго типа товара
+                    if (option == "option1") {
+                        price = 20;
+                    } else if (option == "option2") {
+                        price = 30;
+                    }
+                } else if (type == 3) {
+                    // Расчет для третьего типа товара
+                    if (property) {
+                        price = 15;
+                    } else {
+                        price = 5;
+                    }
+                }
+
+                var totalPrice = price * quantity;
+
+                $("#price").text(totalPrice);
+            }
+        </script>
+    </div>
 <div class="container abc">
 
 <div class="megaref">
